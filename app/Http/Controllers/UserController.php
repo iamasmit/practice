@@ -23,11 +23,33 @@ class UserController extends Controller
     }
     public function list()
     {
+        $users = DB::table('users')->get();
+
+        return view('user-list', compact('users'));
+        // foreach ($users as $user) {
+        //     dump($user);
+        // }
+        // dd($users->toArray());
     }
     public function update()
     {
+        $data = [
+            "name" => 'Test1',
+            "username" => 'Test User 1',
+            "email" => 'test12@gmail.com',
+            "password" => 'test123',
+            "gender" => 'male',
+            "phone" => 987456135,
+            "status" => 0,
+
+            "updated_at" => now(),
+        ];
+        DB::table('users')->where('id', 1)->update($data);
+        dd("User Updated Successfully");
     }
     public function delete()
     {
+        DB::table('users')->where('id', 2)->delete();
+        dd("Data delete Successfully");
     }
 }
