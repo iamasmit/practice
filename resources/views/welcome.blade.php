@@ -49,7 +49,7 @@ input[type=submit]:hover {
 <b>Hello Dear Github</b>
 
 <a href="facebook.com">Asmit</a>
-<<<<<<< HEAD
+
     <div class="container">
   <form action="{{route('register')}}" method="POST">
     @csrf
@@ -79,7 +79,5 @@ input[type=submit]:hover {
 
 
 
-=======
-<b>agagag</b>
->>>>>>> 68331eb0b248022e30f4cb5a1a6ab75061109d6f
+
 
